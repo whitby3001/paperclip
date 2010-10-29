@@ -303,7 +303,7 @@ module Paperclip
       end
       
       def cloudfiles
-        @@cf ||= CloudFiles::Connection.new(@cloudfiles_credentials[:username], @cloudfiles_credentials[:api_key], true, @cloudfiles_credentials[:servicenet])
+        @@cf ||= CloudFiles::Connection.new(:username => @cloudfiles_credentials[:username], :api_key => @cloudfiles_credentials[:api_key], :snet => @cloudfiles_credentials[:servicenet])
       end
 
       def create_container

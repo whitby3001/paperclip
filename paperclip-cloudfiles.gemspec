@@ -28,7 +28,7 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda'
   s.add_development_dependency 'mocha'
   s.add_development_dependency 'aws-s3'
-  s.add_development_dependency 'cloudfiles'
+  s.add_dependency 'cloudfiles', '>= 1.4.9'
   s.add_development_dependency 'sqlite3-ruby'
   s.add_development_dependency 'active_record'
   s.add_development_dependency 'active_support'
