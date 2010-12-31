@@ -37,6 +37,8 @@ GEM
       mime-types
       xml-simple
     builder (2.1.2)
+    cloudfiles (1.4.10)
+      mime-types (>= 1.16)
     columnize (0.3.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -89,8 +91,9 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   aws-s3
+  cloudfiles
   mocha
-  rails (>= 3.0.3)
+  rails (~> 3.0.0)
   rake
   ruby-debug
   shoulda

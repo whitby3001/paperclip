@@ -9,10 +9,12 @@ GEM
       mime-types
       xml-simple
     builder (3.0.0)
+    cloudfiles (1.4.10)
+      mime-types (>= 1.16)
     columnize (0.3.2)
     linecache (0.43)
     mime-types (1.16)
-    mocha (0.9.9)
+    mocha (0.9.10)
       rake
     rake (0.8.7)
     ruby-debug (0.10.4)
@@ -30,6 +32,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   aws-s3
+  cloudfiles
   mocha
   rake
   ruby-debug
