@@ -5,3 +5,8 @@ test/s3.yml
 test/cloudfiles.yml
 public
 *.gem
+paperclip*.gem
+capybara*.html
+*.rbc
+.bundle
+*SPIKE*
