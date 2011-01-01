@@ -84,6 +84,10 @@ module Paperclip
       def exists?(style = default_style)
         cloudfiles_container.object_exists?(path(style))
       end
+      
+      def read
+        self.data
+      end
 
       # Returns representation of the data of the file assigned to the given
       # style, in the format most representative of the current storage.
