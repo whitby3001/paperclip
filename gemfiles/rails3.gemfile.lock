@@ -91,7 +91,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   aws-s3
-  cloudfiles
+  cloudfiles (>= 1.4.9)
   mocha
   rails (~> 3.0.0)
   rake

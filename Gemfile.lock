@@ -32,7 +32,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   aws-s3
-  cloudfiles
+  cloudfiles (>= 1.4.9)
   mocha
   rake
   ruby-debug
