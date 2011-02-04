@@ -24,6 +24,7 @@ module Paperclip
     #       username: minter
     #       api_key: 87k... 
     #       servicenet: true
+    #       auth_url: https://lon.auth.api.rackspacecloud.com/v1.0
     #   This is not required, however, and the file may simply look like this:
     #     username: minter...
     #     api_key: 11q... 
@@ -39,6 +40,9 @@ module Paperclip
     #   you will want to interpolate. Keys should be unique, like filenames, and despite the fact that
     #   Cloud Files (strictly speaking) does not support directories, you can still use a / to
     #   separate parts of your file name, and they will show up in the URL structure.
+    # * +auth_url+: The URL to the authentication endpoint. If blank, defaults to the Rackspace Cloud Files
+    #   USA endpoint. You can use this to specify things like the Rackspace Cloud Files UK infrastructure, or
+    #   a non-Rackspace OpenStack Swift installation.  Requires 1.4.11 or higher of the Cloud Files gem.
     module Cloud_files
       def self.extended base
         require 'cloudfiles'
@@ -59,7 +63,10 @@ module Paperclip
       end
       
       def cloudfiles
-        @@cf ||= CloudFiles::Connection.new(:username => @cloudfiles_credentials[:username], :api_key => @cloudfiles_credentials[:api_key], :snet => @cloudfiles_credentials[:servicenet])
+        @@cf ||= CloudFiles::Connection.new(:username => @cloudfiles_credentials[:username], 
+                                            :api_key => @cloudfiles_credentials[:api_key], 
+                                            :snet => @cloudfiles_credentials[:servicenet],
+                                            :auth_url = (@cloudfiles_credentials[:auth_url] || || CloudFiles::AUTH_USA))
       end
 
       def create_container
