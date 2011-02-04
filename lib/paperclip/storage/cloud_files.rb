@@ -66,7 +66,7 @@ module Paperclip
         @@cf ||= CloudFiles::Connection.new(:username => @cloudfiles_credentials[:username], 
                                             :api_key => @cloudfiles_credentials[:api_key], 
                                             :snet => @cloudfiles_credentials[:servicenet],
-                                            :auth_url = (@cloudfiles_credentials[:auth_url] || || CloudFiles::AUTH_USA))
+                                            :auth_url => (@cloudfiles_credentials[:auth_url] || CloudFiles::AUTH_USA))
       end
 
       def create_container
