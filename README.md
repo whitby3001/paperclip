@@ -23,7 +23,7 @@ personally use on projects, so until they discover the joy of Cloud Files, this
 fork is available as the {paperclip-cloudfiles gem}[http://gemcutter.org/gems/paperclip-cloudfiles]
 on Gemcutter's gem server.
 
-The complete [RDoc](http://rdoc.info/gems/paperclip) is online.
+The complete [RDoc](http://rdoc.info/github/minter/paperclip) is online.
 
 Installation
 ------------
