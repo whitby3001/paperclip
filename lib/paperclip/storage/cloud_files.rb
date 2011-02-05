@@ -49,7 +49,7 @@ module Paperclip
         @@container ||= {}
         base.instance_eval do
           @cloudfiles_credentials = parse_credentials(@options[:cloudfiles_credentials])
-          @container_name         = @options[:container]              || @cloudfiles_credentials[:container]
+          @container_name         = @options[:container] || options[:container_name] || @cloudfiles_credentials[:container] | @cloudfiles_credentials[:container_name]
           @container_name         = @container_name.call(self) if @container_name.is_a?(Proc)
           @cloudfiles_options     = @options[:cloudfiles_options]     || {}
           @@cdn_url               = cloudfiles_container.cdn_url
