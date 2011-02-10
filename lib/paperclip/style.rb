@@ -18,9 +18,11 @@ module Paperclip
         @geometry = definition.delete(:geometry)
         @format = definition.delete(:format)
         @processors = definition.delete(:processors)
+        @convert_options = definition.delete(:convert_options) # adding to support individual convert options per style
         @other_args = definition
       else
         @geometry, @format = [definition, nil].flatten[0..1]
+        @convert_options = ""
         @other_args = {}
       end
       @format  = nil if @format.blank?
@@ -45,7 +47,8 @@ module Paperclip
     end
 
     def convert_options
-      attachment.send(:extra_options_for, name)
+      #attachment.send(:extra_options_for, name)
+      @convert_options
     end
 
     # returns the geometry string for this style
