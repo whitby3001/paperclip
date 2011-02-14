@@ -9,11 +9,11 @@ exclude_files = ["test/s3.yml", "test/debug.log", "test/paperclip.db", "test/doc
 end.flatten
 
 spec = Gem::Specification.new do |s| 
-  s.name              = "paperclip-cloudfiles"
+  s.name              = "whitby3001-paperclip-cloudfiles"
   s.version           = Paperclip::VERSION
-  s.authors           = ["Jon Yurek","H. Wade Minter"]
-  s.email             = ["jyurek@thoughtbot.com", "minter@lunenburg.org"]
-  s.homepage          = "http://github.com/minter/paperclip"
+  s.authors           = ["David Whitby"]
+  s.email             = ["whitby3001@gmail.com"]
+  s.homepage          = "http://github.com/whitby3001/paperclip"
   s.description       = "Easy upload management for ActiveRecord with Rackspace Cloud Files support"
   s.platform          = Gem::Platform::RUBY
   s.summary           = "File attachments as attributes for ActiveRecord with Rackspace Cloud Files support"
